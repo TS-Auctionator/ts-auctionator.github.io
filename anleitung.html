@@ -183,6 +183,8 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <h1 class="brand"><span class="ts">TS</span> Auctionator</h1></div>
   <p class="lede">Ein Auktionshaus-Helfer für World of Warcraft Forever. Er hält deine Ware oben im AH, rechnet aus, was sich zu handwerken lohnt, und kauft die Materialien ein. Du drückst nur noch eine Taste.</p>
   <div class="meta">
+    <a class="chip" href="./">Zur Startseite</a>
+    <span class="chip">Version 1.0.0</span>
     <span class="chip">Spielversion: _forever_ (1.60)</span>
     <span class="chip">Sprache: Deutsch</span>
     <span class="chip">Läuft ohne andere Add-ons</span>
@@ -223,11 +225,12 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <section id="start">
   <h2><span class="n">3</span>Erste Schritte</h2>
   <ol class="steps">
-    <li><div><strong>Taste belegen.</strong> <span class="ui">Esc</span> › <span class="ui">Optionen</span> › <span class="ui">Tastaturbelegung</span> › <span class="ui">AddOns</span>. Dort gibt es drei Einträge:
+    <li><div><strong>Taste belegen.</strong> <span class="ui">Esc</span> › <span class="ui">Optionen</span> › <span class="ui">Tastaturbelegung</span> › <span class="ui">AddOns</span>. Dort gibt es vier Einträge:
       <ul>
         <li><strong>Nächste Aktion</strong>: die wichtigste Taste, z. B. eine Maustaste oder <kbd>F</kbd>.</li>
         <li><strong>Überspringen</strong>: lässt die aktuelle Aktion aus.</li>
         <li><strong>Fenster ein/aus</strong>: öffnet das Hauptfenster.</li>
+        <li><strong>Warteschlange: Herstellen / Verzaubern</strong>: startet den nächsten Eintrag der Herstell-Warteschlange (siehe <a href="#beruf">Abschnitt 11</a>).</li>
       </ul></div></li>
     <li><div><strong>Berufsfenster einmal öffnen</strong> (z. B. Schneiderei). Erst dann kennt das Add-on deine Rezepte.</div></li>
     <li><div><strong>Zum Auktionshaus gehen.</strong> Beim ersten Besuch pro Spielsitzung läuft automatisch ein Komplettscan. Der liest das ganze AH in wenigen Sekunden.</div></li>
@@ -255,10 +258,10 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
         <div class="hint" style="margin-top:8px">Item ziehen · Name eintippen + Enter · Shift-Klick · oder "Aus AH":</div>
         <div class="addrow"><span class="slot">+</span><span class="inp">Itemname…</span><span class="gb mini">Aus AH</span></div>
         <div class="rows">
-          <div class="row"><span class="ico b"></span><div><div class="nm">Robe von Arcana <span class="c-dim">(0)</span></div><div class="st c-ok">Du stehst oben (95s) – nichts zu tun</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
-          <div class="row"><span class="ico a"></span><div><div class="nm">Rote Magiestofftasche <span class="c-dim">(1)</span></div><div class="st c-or">Konkurrenz unter Mindestpreis (2g 10s &lt; 2g 21s)</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
-          <div class="row"><span class="ico d"></span><div><div class="nm">Schwarze Magiestoffstiefel <span class="c-dim">(3)</span></div><div class="st c-gold">Unterboten – einstellen für 4g 80s</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
-          <div class="row"><span class="ico c"></span><div><div class="nm">Weißes Schwadroneurshemd <span class="c-dim">(0)</span></div><div class="st c-dim">Keine mehr in den Taschen</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
+          <div class="row"><span class="ico b"></span><div><div class="nm">Robe von Arcana <span class="c-dim">(0)</span></div><div class="st c-ok">Oben 95s · Gewinn 31s</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
+          <div class="row"><span class="ico a"></span><div><div class="nm">Rote Magiestofftasche <span class="c-dim">(1)</span></div><div class="st c-or">Konkurrenz unter Mindestpreis 2g 10s &lt; 2g 21s</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
+          <div class="row"><span class="ico d"></span><div><div class="nm">Schwarze Magiestoffstiefel <span class="c-dim">(3)</span></div><div class="st c-gold">Unterboten » KLICK: 4g 80s · Gewinn 1g 2s</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
+          <div class="row"><span class="ico c"></span><div><div class="nm">Weißes Schwadroneurshemd <span class="c-dim">(0)</span></div><div class="st c-dim">Taschen leer · Markt 1g 5s · Gewinn 8s</div></div><span class="gb mini">Bearb.</span><span class="gb mini">X</span></div>
         </div>
         <div class="addrow"><span class="hint">Diesmal anderer Preis:</span><span class="inp" style="max-width:110px"></span><span class="hint">z. B. -5s oder 2g 30s</span></div>
         <div class="split">
@@ -280,7 +283,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
     <ul class="legend">
       <li><span class="pin">1</span><div><strong>Obere Leiste:</strong> Überwachung an/aus, Einstellungen, Marktanalyse, Einkaufsliste.</div></li>
       <li><span class="pin">2</span><div><strong>Item hinzufügen:</strong> Item auf das <span class="ui">+</span> ziehen, Namen eintippen oder <span class="ui">Aus AH</span> nehmen.</div></li>
-      <li><span class="pin">3</span><div><strong>Deine Verkaufsliste.</strong> Jede Zeile zeigt, was gerade los ist. Die Zahl in Klammern sind deine Stücke in den Taschen. Maus drüber zeigt Details und Materialkosten, ein Klick öffnet die Angebots-Tabelle.</div></li>
+      <li><span class="pin">3</span><div><strong>Deine Verkaufsliste.</strong> Jede Zeile zeigt, was gerade los ist. Die Zahl in Klammern sind deine Stücke in den Taschen. Hinter dem Preis steht der <strong>Gewinn pro Stück</strong> (Preis minus 5 % Gebühr minus Materialkosten). Maus drüber zeigt Details und Materialkosten, ein Klick öffnet die Angebots-Tabelle.</div></li>
       <li><span class="pin">4</span><div><strong>Diesmal anderer Preis:</strong> einmalig vom Plan abweichen (siehe <a href="#taste">Abschnitt 6</a>).</div></li>
       <li><span class="pin">5</span><div><strong>Die große Taste</strong> mit dem nächsten Schritt, daneben <span class="ui">Überspringen</span>.</div></li>
       <li><span class="pin">6</span><div><strong>Untere Leiste:</strong> Schnäppchen, Statistik, Wunschliste.</div></li>
@@ -291,14 +294,14 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <div class="tbl"><table>
     <thead><tr><th>Anzeige</th><th>Bedeutung</th></tr></thead>
     <tbody>
-      <tr><td><span class="dot" style="background:var(--ok)"></span>Du stehst oben</td><td>Dein Angebot ist das günstigste. Nichts zu tun.</td></tr>
-      <tr><td><span class="dot" style="background:var(--gold)"></span>einstellen für …</td><td>Du wurdest unterboten oder hast verkauft. Die Taste stellt ein neues ein.</td></tr>
+      <tr><td><span class="dot" style="background:var(--ok)"></span>Oben</td><td>Dein Angebot ist das günstigste. Dahinter dein Preis und der Gewinn. Nichts zu tun.</td></tr>
+      <tr><td><span class="dot" style="background:var(--gold)"></span>KLICK: Preis</td><td>Unterboten oder „Nicht drin“ (verkauft). Die Taste stellt zu diesem Preis ein neues ein. Der Gewinn steht dahinter.</td></tr>
       <tr><td><span class="dot" style="background:var(--gold)"></span>teuerste abbrechen</td><td>Du hast zu viele eigene Auktionen drin. Die teuerste wird abgebrochen.</td></tr>
       <tr><td><span class="dot" style="background:var(--warn)"></span>Konkurrenz unter Mindestpreis</td><td>Jemand verkauft billiger, als du willst. Das Add-on macht nicht mit. Mit „Diesmal anderer Preis“ kannst du trotzdem.</td></tr>
       <tr><td><span class="dot" style="background:var(--warn)"></span>Unterbietungskrieg</td><td>Derselbe Verkäufer unterbietet dich immer wieder. Das Add-on pausiert eine Weile gegen ihn.</td></tr>
       <tr><td><span class="dot" style="background:var(--warn)"></span>Gleichstand</td><td>Jemand hat genau deinen Preis. Das Add-on wartet kurz statt sofort zu reagieren.</td></tr>
       <tr><td><span class="dot" style="background:var(--bad)"></span>Mindestpreis fehlt</td><td>Noch kein Preis bekannt. Am AH wird gescannt, das erledigt sich meist von selbst.</td></tr>
-      <tr><td><span class="dot" style="background:var(--muted)"></span>Keine mehr in den Taschen</td><td>Nichts mehr zum Verkaufen da. Nachproduzieren.</td></tr>
+      <tr><td><span class="dot" style="background:var(--muted)"></span>Taschen leer</td><td>Nichts mehr zum Verkaufen da. Dahinter steht trotzdem der Preis deiner Auktion im AH („deine“) oder der Marktpreis, jeweils mit Gewinn. So siehst du, ob sich Nachproduzieren lohnt.</td></tr>
       <tr><td><span class="dot" style="background:var(--gold)"></span>Liegt im Briefkasten</td><td>Abgebrochene Ware kommt per Post zurück. Abholen, dann geht es weiter.</td></tr>
     </tbody>
   </table></div>
@@ -378,6 +381,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
       <tr><td>Laufzeit</td><td>2, 8 oder 24 Stunden. Kurz ist billiger bei der Gebühr.</td></tr>
       <tr><td>Alte abbrechen ab X</td><td>Siehe <a href="#strategie">Abschnitt 7</a>.</td></tr>
       <tr><td>Taschen leer: alle teureren abbrechen</td><td>Siehe <a href="#strategie">Abschnitt 7</a>.</td></tr>
+      <tr><td>Mindestpreis ignorieren</td><td>Zum schnellen Loswerden: Mindestpreis zählt nicht, es wird immer knapp unter die Konkurrenz eingestellt, auch unter deinen Kosten. Der Mindestpreis zeigt dann „ignoriert“.</td></tr>
       <tr><td>Aktiv</td><td>Aus = Item bleibt auf der Liste, wird aber nicht verkauft.</td></tr>
     </tbody>
   </table></div>
@@ -419,7 +423,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
       <tr><td>Gewinn</td><td>Was nach 5 % AH-Gebühr übrig bleibt.</td></tr>
       <tr><td>Marge</td><td>Gewinn im Verhältnis zu den Kosten.</td></tr>
       <tr><td>Angebot</td><td>Wie viele gerade im AH sind.</td></tr>
-      <tr><td>Nachfrage</td><td>Geschätzt daraus, wie schnell das Angebot zwischen den Scans schrumpft.</td></tr>
+      <tr><td>Nachfrage</td><td>Eine Schätzung aus deinen eigenen Verkäufen und daraus, wie schnell das Angebot zwischen den Scans schrumpft. Abbrüche (deine und die beim Unterbieten) zählen nicht als Verkauf. Hast du ein Item seit 12 Stunden drin und nichts verkauft, steht es höchstens auf „Niedrig“. Der Tooltip zeigt die Einzelwerte.</td></tr>
     </tbody>
   </table></div>
   <ul>
@@ -445,6 +449,25 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
     <figcaption>So siehst du schon beim Herstellen, ob es sich lohnt.</figcaption>
   </figure>
   <p>Bist du am Auktionshaus, werden beim Anklicken eines Rezepts Produkt und Materialien sofort neu gescannt. Woanders siehst du die zuletzt bekannten Preise. Wie alt sie sind, steht in Klammern dahinter.</p>
+  <p>Bei <strong>Verzauberungen</strong> gibt es nichts zu verkaufen. Dort steht stattdessen, was das Material für eine Verzauberung kostet und wie viel davon du noch kaufen musst.</p>
+
+  <h3>Herstell-Warteschlange</h3>
+  <p>Unten am Berufsfenster hängt die Lasche <span class="ui">TS Warteschlange</span>. Darin planst du mehrere Rezepte hintereinander, z. B. erst 50 Magiestoffballen, dann 10 Rote Magiestofftaschen.</p>
+  <ul>
+    <li><strong>Hinzufügen</strong>: Rezept auswählen, Anzahl eintragen, <span class="ui">+ Ausgewähltes Rezept</span>. Oder <span class="ui">Aus Einkaufsliste</span>: übernimmt alles, was dort auf „Selbst herstellen“ steht, Zwischenprodukte zuerst.</li>
+    <li><strong>Rechnet voraus</strong>: Was ein Eintrag weiter oben herstellt, zählt schon als Material für die darunter. Grün heißt, das Material reicht. Orange (z. B. „6/10“) heißt, es reicht nur für einen Teil. Maus drüber zeigt, was fehlt, und die Materialkosten.</li>
+    <li><strong>Herstellen</strong>: Der große Knopf (oder deine Taste) stellt die ganze Menge des obersten Eintrags her. Danach kommt ein Ton, und der nächste ist dran.</li>
+    <li><strong>Reihenfolge</strong>: Mit <span class="ui">^</span> und <span class="ui">v</span> umsortieren. Der Knopf nimmt immer den obersten Eintrag, und jede fertige Herstellung wird beim passenden Eintrag abgezogen, egal wo er steht.</li>
+  </ul>
+  <div class="box warn"><strong>Ein Klick pro Rezept</strong><p>Wenn ein Rezept fertig ist, startet das nächste nicht von selbst. Blizzard verlangt für jedes neue Herstellen einen Klick oder Tastendruck. Am bequemsten mit der Taste aus <a href="#start">Abschnitt 3</a>.</p></div>
+
+  <h3>Sofort verzaubern</h3>
+  <p>Bei Verzauberkunst gibt es statt der Warteschlange den Knopf <span class="ui">Sofort verzaubern</span> links neben „Verzaubern“. Rechts wie gewohnt das Ziel wählen, dann klicken.</p>
+  <ul>
+    <li>Ist auf dem Item schon eine Verzauberung, fragt das Spiel „Verzauberung ersetzen?“. Der Knopf wird dann gelb und heißt <span class="ui">Bestätigen</span>. Ein zweiter Klick an derselben Stelle bestätigt.</li>
+    <li>Der Knopf bestätigt nur diese Frage (und „wird seelengebunden“), nie einen anderen Dialog.</li>
+    <li>Auf unverzauberten Items reicht ein Klick pro Verzauberung.</li>
+  </ul>
 </section>
 
 <section id="einkauf">
@@ -458,7 +481,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
     <li><div>Gekauftes kommt <strong>per Post</strong>. Bis du es abholst, steht es als „unterwegs“ in der Liste und wird nicht doppelt gekauft.</div></li>
   </ol>
   <h3>Selbst herstellen oder kaufen?</h3>
-  <p>Bei Zwischenprodukten (z. B. Magiestoffballen aus Magiestoff) gibt es einen Umschalt-Knopf. Standard ist das Günstigere. Stellst du auf „Kaufen“, rechnen auch Mindestpreis und Marktanalyse mit dem AH-Preis.</p>
+  <p>Bei Zwischenprodukten (z. B. Magiestoffballen aus Magiestoff) gibt es einen Umschalt-Knopf. Standard ist das Günstigere. Die Wahl gilt pro Material, aber in allen Rezepten, und bleibt gespeichert. Stellst du auf „Kaufen“, rechnen auch Mindestpreis, Gewinn und Marktanalyse mit dem AH-Preis. Der Tooltip am Knopf zeigt beide Preise pro Stück und wie viel du bei der fehlenden Menge sparst.</p>
   <div class="box warn"><strong>Teurer als erwartet?</strong><p>Liegt der echte Preis deutlich über der Schätzung, warnt das Add-on vor dem zweiten Klick. Du kannst dann abbrechen.</p></div>
 </section>
 
@@ -502,7 +525,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
       </ul>
     </div>
   </div>
-  <p>Wenn etwas verkauft wird, kommt das Gold erst nach etwa einer Stunde in den Briefkasten. Das Fenster <strong>Unterwegs</strong> zeigt jede verkaufte Ware mit Betrag und Restzeit. Der Tooltip am Minimap-Knopf zeigt die Summe.</p>
+  <p>Wenn etwas verkauft wird, kommt das Gold erst nach etwa einer Stunde in den Briefkasten. Das Fenster <strong>Unterwegs</strong> zeigt jede verkaufte Ware mit Betrag und Restzeit. Der Tooltip am Minimap-Knopf zeigt die Summe. Beim Öffnen des Briefkastens gleicht sich die Liste mit der echten Post ab, abgeholtes Gold verschwindet also von selbst.</p>
 </section>
 
 <section id="post">
@@ -570,10 +593,14 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <p>Mit der Maus über die Zeile fahren. Dort steht, wie viel in Taschen, Bank, bei Twinks und in der Post gezählt wird. Twinks werden erst richtig gezählt, wenn du sie einmal eingeloggt hast.</p>
   <h3>Eine Fehlermeldung erscheint im Chat.</h3>
   <p>Die Meldung beginnt mit <code>TS Auctionator</code>. Screenshot machen und an den weitergeben, von dem du das Add-on hast.</p>
+  <h3>Die Warteschlange macht nach einem Rezept nicht weiter.</h3>
+  <p>Das ist Absicht und eine Blizzard-Regel: Jedes neue Herstellen braucht einen Klick. Auf den Ton warten, dann den Knopf oder deine Taste drücken.</p>
+  <h3>„Verzauberung ersetzen?“ kommt trotzdem.</h3>
+  <p>Die Frage erscheint einen Moment nach dem Klick. Dann wird <span class="ui">Sofort verzaubern</span> zu <span class="ui">Bestätigen</span>, einfach noch einmal klicken.</p>
   <h3>Kann ich gebannt werden?</h3>
   <p>Das Add-on hält sich an Blizzards Regeln: Jede Aktion im AH braucht deinen Klick oder Tastendruck. Gegen die Regeln wären Makro-Tools oder Programme, die für dich klicken. Die bitte nicht dazu benutzen.</p>
 </section>
 
-<footer>TS Auctionator · Anleitung für die deutsche Version · Stand November 2026</footer>
+<footer>TS Auctionator · Anleitung zu Version 1.0.0 · Stand 13. November 2026</footer>
 </main>
 </div>
