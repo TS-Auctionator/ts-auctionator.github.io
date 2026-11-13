@@ -1,0 +1,22 @@
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1.0625rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.5rem, 4.2vw + 1rem, 4.5rem);
+  --text-section: clamp(1.875rem, 2.2vw + 1rem, 3rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.3125rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(62% 0.19 27); --color-success: oklch(72% 0.15 150);
+  --container: 1200px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 96px; --section-gap: 128px; --section-gap-l: 160px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  /* Nachtschwarz wie ein WoW-Fenster, Gold als einziges Signal, Arkanblau für das "TS" */
+  --color-paper: oklch(16% 0.012 265); --color-paper-2: oklch(20% 0.015 265); --color-paper-3: oklch(25% 0.018 265);
+  --color-ink: oklch(94% 0.015 85); --color-ink-2: oklch(84% 0.02 85); --color-muted: oklch(70% 0.02 85);
+  --color-rule: oklch(42% 0.05 80);
+  --color-accent: oklch(82% 0.15 85); --color-accent-ink: oklch(18% 0.03 70); --color-focus: oklch(80% 0.13 230);
+  --color-arcane: oklch(78% 0.12 225); --color-red: oklch(42% 0.15 27); --color-red-2: oklch(50% 0.17 27);
+  /* Systemschriften: keine externen Font-Server (Datenschutz) */
+  --font-display: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, ui-serif, serif;
+  --font-body: "Segoe UI", system-ui, -apple-system, Roboto, ui-sans-serif, sans-serif; --font-outlier: var(--font-body);
+  --radius-card: 6px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: 0 18px 50px oklch(0% 0 0 / 0.55);
+  --tracking-display: 0;
+}
