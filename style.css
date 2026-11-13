@@ -62,6 +62,10 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: 0.92em; backgr
 .rule-note { max-width: 62ch; }
 .rule-note p { margin-top: var(--space-md); color: var(--color-ink-2); font-size: var(--text-lead); }
 
+.update-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-lg); margin-top: var(--space-2xl); padding: var(--space-lg) var(--space-xl); border: 1px solid var(--color-rule); border-radius: var(--radius-card); background: var(--color-paper-2); }
+.update-box > div { flex: 1 1 360px; min-width: 0; }
+.update-box p { margin-top: var(--space-xs); color: var(--color-ink-2); }
+
 /* Neuigkeiten */
 .page-head { padding-block: var(--space-2xl) var(--space-xl); }
 .page-head h1 { font-size: var(--text-display-s); color: var(--color-accent); font-weight: 600; }
