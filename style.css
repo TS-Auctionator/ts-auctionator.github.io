@@ -27,11 +27,12 @@ body { background: radial-gradient(ellipse 80% 50% at 70% 0%, var(--color-paper-
 .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 
 /* Hero */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-xl) var(--section-gap-s); }
-.hero-logo { width: min(340px, 80%); margin-bottom: var(--space-lg); }
+.hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-xl) var(--section-gap-s); }
+.hero-logo { width: min(300px, 80%); margin-bottom: var(--space-lg); }
 .hero h1 { font-size: var(--text-display); line-height: 1.05; color: var(--color-ink); font-weight: 600; }
 .hero .lead { margin-top: var(--space-lg); font-size: var(--text-lead); color: var(--color-ink-2); max-width: 32ch; }
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.hero .btn { padding: 0 var(--space-lg); }
 .fineprint { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
 
 .frame { border: 2px solid var(--color-rule); border-radius: var(--radius-card); box-shadow: var(--shadow-card); background: var(--color-paper-2); padding: var(--space-xs); }
